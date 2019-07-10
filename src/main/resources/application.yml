@@ -27,6 +27,7 @@ swagger:
   base-package: com.jiayaxing.clouddemo.clouduserservice.controller
   enabled: true  #http://localhost:8082/swagger-ui.html即可访问swagger
 
+#Apollo相关配置
 app:
   id: demoApollo
 # set apollo meta server address, adjust to actual address if necessary
