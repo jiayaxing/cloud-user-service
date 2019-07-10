@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserServiceController {
     private static Logger log = LoggerFactory.getLogger(UserServiceController.class);
 
+    @Value("${hello:apollo}")
+    private String hello;
+
     @ResponseBody
     @ApiOperation(value = "文件上传接口1", notes = "可以一次上传多个文件1")
     @ApiImplicitParams({
@@ -28,6 +32,7 @@ public class UserServiceController {
         StringBuffer str =  new StringBuffer();
         str.append("调用成功").append(aa);
         log.info("被调用");
+        log.info(hello);
         return str.toString();
     }
 

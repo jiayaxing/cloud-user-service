@@ -26,3 +26,10 @@ swagger:
   description: 提供用户服务接口1
   base-package: com.jiayaxing.clouddemo.clouduserservice.controller
   enabled: true  #http://localhost:8082/swagger-ui.html即可访问swagger
+
+app:
+  id: demoApollo
+# set apollo meta server address, adjust to actual address if necessary
+apollo:
+  meta: http://192.168.1.162:8080
+
